@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root{
+    --dark: #2b2d42;
+    --light: #abd5bd;
+    --border: #C9C9C9;
+    --border-btn: #edf2f4;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+
+}
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+.nav-brand{
+    font-size:1.5em;
+    font-weight: bold;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-between{
+    justify-content: space-between;
+
+}
+.text-center{
+    text-align: center;
+}
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+.text-dark{
+    color: var(--dark);
+}
+.inline{
+    display: inline-block;
+}
+.text-light{
+    color:var(--light);
+}
+.text-gradient{
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#header nav{
+    background-color: #F3B61F;
+    padding: 1em 0;
+    width:100%;
+}
+.site-main{
+    margin-top: 3em;
+    font-family: 'Barlow', sans-serif;
+}
+.site-main .container .box-nav >a {
+    font-size: 1em;
+    padding: .5em 1em;
+}
+.site-main .container form{
+    margin: 2em 0em;   
+}
+.table{
+    border-spacing: 0px;
+    width: 100%;
+}
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+.table td >a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+.table tr:hover{
+    background-color: #86CB92 ;
+}
+.table tr:hover td> a{
+    box-shadow: none;
+}
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark);
+    border-color: #32383e 
+} 
+@media only screen and (max-width: 1024px){
+    table, thead,tbody, tr, td{
+        display: block;
+    }
+    thead tr{
+       position: absolute;
+       top: -9999px;
+       left: -9999px; 
+    }
+    tr{
+        border: 1px solid var(--border)
+    }
+    td{
+        border: none;
+        position: relative;
+    }
+}
+
+/*add_task styling starts here*/
+
+.form-title >span{
+    padding: .5em 0;
+}
+.new_task{
+    max-width: 786px;
+    margin:auto;
+}
+#update_task .form-group,
+#add_task .form-group{
+    margin: .4em 0;
+}
+#update_task .form-group input[type="text"],
+#add_task .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+#update_task .form-group input[type="date"],
+#update_task .form-group input[type="time"],
+#add_task .form-group input[type="date"],
+#add_task .form-group input[type="time"]{
+    margin: 1em 2em;
+    box-shadow: none;
+    appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:2px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+#update_task .form-group .btn,
+#add_task .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #F3B61F;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+#update_task .form-group .btn:hover,
+#add_task .form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
+}
