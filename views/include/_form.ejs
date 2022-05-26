@@ -1,0 +1,32 @@
+<form method="POST" id="add_task">
+    <div class="new_task">
+        <div class="form-group">
+            <label for="title" class="text-light">Title</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="title" required="required" value="" placeholder="Type your title here">
+        </div>
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="" placeholder="Type your description here">
+        </div>
+        <div class="form-group">
+            <label for="startDateAndTime" class="text-light">Start Date & Time</label>
+            <input type="date" required="required" name="startDateAndTime"><input  required="required" type="time" name="startDateAndTime">
+        </div>
+        <div class="form-group">
+            <label for="endDateAndTime" class="text-light">End Date & Time</label>
+            <input type="date" required="required" name="endDateAndTime"><input  required="required" type="time" name="endDateAndTime">
+        </div>
+        <div class="form-group">
+            <label for="priority" class="text-light">Priority</label>
+            <input type="text" name="priority" value="" placeholder="Type your priority here">
+        </div>
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <input type="text" name="status" value="" placeholder="Type your status here">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+</form>
