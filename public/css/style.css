@@ -138,10 +138,8 @@ a{
     font-size: 1em;
     border-radius: .2em;
 }
-#update_task .form-group input[type="date"],
-#update_task .form-group input[type="time"],
-#add_task .form-group input[type="date"],
-#add_task .form-group input[type="time"]{
+#update_task .form-group input[type="datetime-local"],
+#add_task .form-group input[type="datetime-local"]{
     margin: 1em 2em;
     box-shadow: none;
     appearance: none;
