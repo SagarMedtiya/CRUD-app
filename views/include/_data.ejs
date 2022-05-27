@@ -1,10 +1,12 @@
+
+<% for(var i =0; i<tasks.length; i++) { %>
 <tr>
-    <td>Task 1</td>
-    <td> Start of the Task 1</td>
-    <td> 26-05-2022 12:00 PM</td>
-    <td> 27-05-2022 12:00 PM</td>
-    <td>1</td>
-    <td>Done</td>
+    <td><%= tasks[i].title%></td>
+    <td><%= tasks[i].description%></td>
+    <td><%= moment(tasks[i].start).format('DD/MM/YYYY h:mm A ')%></td>
+    <td><%= moment(tasks[i].end).format('DD/MM/YYYY h:mm A ')%></td>
+    <td><%= tasks[i].priority%></td>
+    <td><%= tasks[i].status%></td>
     <td>
         <a href="/update-task" class="btn border-shadow update">
         <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
@@ -14,3 +16,4 @@
         </a>
     </td>
 </tr>
+<% }%>
