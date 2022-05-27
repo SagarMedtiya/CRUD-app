@@ -1,4 +1,4 @@
-<form method="POST" id="add_task">
+<form action='/api/tasks' method="POST" id="add_task">
     <div class="new_task">
         <div class="form-group">
             <label for="title" class="text-light">Title</label>
@@ -10,12 +10,12 @@
             <input type="text" name="description" value="" placeholder="Type your description here">
         </div>
         <div class="form-group">
-            <label for="startDateAndTime" class="text-light">Start Date & Time</label>
-            <input type="date" required="required" name="startDateAndTime"><input  required="required" type="time" name="startDateAndTime">
+            <label for="start" class="text-light">Start Date & Time</label>
+            <input type="datetime-local" required="required" name="start">
         </div>
         <div class="form-group">
-            <label for="endDateAndTime" class="text-light">End Date & Time</label>
-            <input type="date" required="required" name="endDateAndTime"><input  required="required" type="time" name="endDateAndTime">
+            <label for="end" class="text-light">End Date & Time</label>
+            <input type="datetime-local" required="required" name="end">
         </div>
         <div class="form-group">
             <label for="priority" class="text-light">Priority</label>
