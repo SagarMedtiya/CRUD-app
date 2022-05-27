@@ -1,27 +1,27 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    Title:{
+    title:{
         type: String,
         required: true
     },
-    Description:{
+    description:{
         type: String,
         required: false
     },
-    StartDateAndTime:{
+    start:{
+        type: Date,
+        required: true
+    },
+    end:{
+        type: Date,
+        required: true
+    },
+    priority:{
         type: Number,
         required: true
     },
-    EndDateAndTime:{
-        type: Number,
-        required: true
-    },
-    Priority:{
-        type: Number,
-        required: true
-    },
-    Status:{
+    status:{
         type: String,
         required: true
     }
