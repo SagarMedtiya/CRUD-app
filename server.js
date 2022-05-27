@@ -5,6 +5,17 @@ const path = require('path')
 const morgan = require("morgan");
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 4000
+const mongoose = require('mongoose')
+
+//Database connection
+const url = process.env.MONGODB_URL;
+mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true
+   }).then(()=>{
+       console.log('Connection Successful');
+   }).catch((error)=>{     
+       console.log('Something went wrong', error)
+   });
+
 
 //log requests
 app.use(morgan('tiny'));
@@ -17,15 +28,9 @@ app.set('view engine',"ejs")
 app.use('/css',express.static(path.resolve(__dirname,'public/css')))
 app.use('/js',express.static(path.resolve(__dirname,'public/js')))
 app.use('/img',express.static(path.resolve(__dirname,'public/img')))
-app.get('/',(req,res)=>{
-    res.render('index');
-})
-app.get('/add-task',(req,res)=>{
-    res.render('add_task');
-})
-app.get('/update-task',(req,res)=>{
-    res.render('update_task');
-})
+
+//load routes
+app.use('/',require('./server/routes/router'))
 
 app.listen(PORT,()=>{
     console.log(`Listening on port ${PORT}`)
