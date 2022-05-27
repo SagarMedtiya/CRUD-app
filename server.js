@@ -5,7 +5,8 @@ const path = require('path')
 const morgan = require("morgan");
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 4000
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 
 //Database connection
 const url = process.env.MONGODB_URL;
