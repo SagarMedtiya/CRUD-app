@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000
 const mongoose = require('mongoose');
 const axios = require('axios')
 
-
+axios.defaults.baseURL = `http://127.0.0.1:${PORT}/`;
 //Database connection
 const url = process.env.MONGODB_URL;
 mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true
