@@ -1,4 +1,3 @@
-
 <% for(var i =0; i<tasks.length; i++) { %>
 <tr>
     <td><%= tasks[i].title%></td>
@@ -8,10 +7,10 @@
     <td><%= tasks[i].priority%></td>
     <td><%= tasks[i].status%></td>
     <td>
-        <a href="/update-task" class="btn border-shadow update">
+        <a href="/update-task?id=<%= tasks[i]._id%>" class="btn border-shadow update">
         <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
         </a>
-        <a class="btn border-shadow delete">
+        <a class="btn border-shadow delete" data-id=<%= tasks[i]._id%>>
         <span class="text-gradient"><i class="fa-solid fa-xmark"></i></i></span>
         </a>
     </td>
