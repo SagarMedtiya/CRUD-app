@@ -140,15 +140,15 @@ a{
 }
 #update_task .form-group input[type="datetime-local"],
 #add_task .form-group input[type="datetime-local"]{
-    margin: 1em 2em;
+    margin: .5em .5em;
     box-shadow: none;
     appearance: none;
-    color: #95a5a6;
+    color: var(--dark);
     font-family: "Helvetica", arial, sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     border:1px solid #ecf0f1;
     background:#ecf0f1;
-    padding:2px;
+    padding:1.2px;
     display: inline-block !important;
     visibility: visible !important;
 }
@@ -168,4 +168,7 @@ a{
 #add_task .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
+}
+.delete{
+    cursor: pointer;
 }
