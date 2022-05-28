@@ -28,11 +28,11 @@
                 </div>
                 <div class="form-group">
                     <label for="start" class="text-light">Start Date & Time</label>
-                    <input type="datetime-local" required="required" name="start" value="<%= moment(task.start).format('yyyy-MM-ddThh:mm:ss')%>">
+                    <input type="datetime-local" required="required" name="start" value="<%= moment(task.start).format("YYYY-MM-DDTkk:mm")%>">
                 </div>
                 <div class="form-group">
                     <label for="end" class="text-light">End Date & Time</label>
-                    <input type="datetime-local" required="required" name="end" value="<%= task.end%>">
+                    <input type="datetime-local" required="required" name="end" value="<%= moment(task.end).format("YYYY-MM-DDTkk:mm")%>">
                 </div>
                 <div class="form-group">
                     <label for="priority" class="text-light">Priority</label>
