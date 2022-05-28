@@ -12,7 +12,7 @@ $('#update_task').submit(function(event){
     console.log(unindexed_array)
 
     var request = {
-        "url": `http://localhost:8080/api/tasks/${data.id}`,
+        "url": `http://localhost:3000/api/tasks/${data.id}`,
         "method": "PUT",
         "data": data
     }
@@ -26,7 +26,7 @@ if(window.location.pathname == '/'){
     $onDelete.click(function(){
         var id = $(this).attr("data-id");
         var request = {
-            "url": `http://localhost:8080/api/tasks/${id}`,
+            "url": `http://localhost:3000/api/tasks/${id}`,
             "method": "DELETE"
         }
         if(confirm("Do you really want to delete the task?")){
